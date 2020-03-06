@@ -1,6 +1,6 @@
-module gitlab.com/itsMontoya/dbutils
+module github.com/Hatch1fy/dbutils
 
-go 1.13
+go 1.14
 
 require (
 	github.com/Hatch1fy/errors v0.2.0

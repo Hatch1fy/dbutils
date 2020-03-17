@@ -2,5 +2,5 @@ github.com/Hatch1fy/errors v0.3.0 h1:KylivctV7WFButh5rYOSHJUTi2gcalRgsGkAfFk1FsY
 github.com/Hatch1fy/errors v0.3.0/go.mod h1:SJFCeScmERvwtYMG7EU24Fe0KfXmiIs7tNlcIl0STKk=
 github.com/boltdb/bolt v1.3.1 h1:JQmyP4ZBrce+ZQu0dY660FMfatumYDLun9hBCUVIkF4=
 github.com/boltdb/bolt v1.3.1/go.mod h1:clJnj/oiGkjum5o1McbSZDSLxVThjynRyGBgiAx27Ps=
-golang.org/x/sys v0.0.0-20200316214734-08c61614bede h1:+jwX0O5IlL7Cj6iam25CdV2pKzCV737/4ewDRGFvwFQ=
-golang.org/x/sys v0.0.0-20200316214734-08c61614bede/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
+golang.org/x/sys v0.0.0-20200316230553-a7d97aace0b0 h1:4Khi5GeNOkZS5DqSBRn4Sy7BE6GuxwOqARPqfurkdNk=
+golang.org/x/sys v0.0.0-20200316230553-a7d97aace0b0/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=

@@ -1,4 +1,4 @@
-module github.com/Hatch1fy/dbutils
+module github.com/gdbu/dbutils
 
 go 1.14
 

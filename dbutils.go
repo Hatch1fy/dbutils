@@ -3,8 +3,8 @@ package dbutils
 import (
 	"fmt"
 
-	"github.com/Hatch1fy/errors"
 	"github.com/boltdb/bolt"
+	"github.com/hatchify/errors"
 )
 
 const (

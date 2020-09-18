@@ -77,7 +77,7 @@ func (dbu *DBUtils) GetCurrent(txn *bolt.Tx, indexKey []byte) (indexBytes []byte
 	return
 }
 
-// Next will get the next available index
+// Next will get the next available index bytes
 // Note: This will increment the index value so the next "on-deck" value will be index + 1
 func (dbu *DBUtils) Next(txn *bolt.Tx, indexKey []byte) (indexBytes []byte, err error) {
 	var index uint64
@@ -93,6 +93,22 @@ func (dbu *DBUtils) Next(txn *bolt.Tx, indexKey []byte) (indexBytes []byte, err 
 
 	// Convert index to index bytes
 	indexBytes = []byte(fmt.Sprintf(dbu.indexFmt, index))
+	return
+}
+
+// NextIndex will get the next available index
+// Note: This will increment the index value so the next "on-deck" value will be index + 1
+func (dbu *DBUtils) NextIndex(txn *bolt.Tx, indexKey []byte) (index uint64, err error) {
+	// Get current index
+	if index, err = dbu.get(txn, indexKey); err != nil {
+		return
+	}
+
+	// Update index to be current index plus 1
+	if err = dbu.set(txn, indexKey, index+1); err != nil {
+		return
+	}
+
 	return
 }
 

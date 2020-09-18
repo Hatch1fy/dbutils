@@ -81,13 +81,7 @@ func (dbu *DBUtils) GetCurrent(txn *bolt.Tx, indexKey []byte) (indexBytes []byte
 // Note: This will increment the index value so the next "on-deck" value will be index + 1
 func (dbu *DBUtils) Next(txn *bolt.Tx, indexKey []byte) (indexBytes []byte, err error) {
 	var index uint64
-	// Get current index
-	if index, err = dbu.get(txn, indexKey); err != nil {
-		return
-	}
-
-	// Update index to be current index plus 1
-	if err = dbu.set(txn, indexKey, index+1); err != nil {
+	if index, err = dbu.NextIndex(txn, indexKey); err != nil {
 		return
 	}
 
